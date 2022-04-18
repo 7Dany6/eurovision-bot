@@ -256,4 +256,308 @@ async def scoreboard(message: types.Message):
         database.give_norway_12_points(callback_query.from_user.id)
         await bot.send_message(callback_query.from_user.id, text="Twelve points to Norway! Thank you!")
 
+    @dp.callback_query_handler(lambda c: c.data == 'Ukraine')
+    async def twelve_points_ukraine(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_ukraine_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Ukraine! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Netherlands')
+    async def twelve_points_netherlands(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_netherlands_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to the Netherlands! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Greece')
+    async def twelve_points_greece(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_greece_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Greece! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Albania')
+    async def twelve_points_albania(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_albania_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Albania! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Armenia')
+    async def twelve_points_armenia(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_armenia_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Armenia! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Moldova')
+    async def twelve_points_moldova(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_moldova_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Moldova! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Portugal')
+    async def twelve_points_portugal(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_portugal_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Portugal! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Swiss')
+    async def twelve_points_swiss(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_swiss_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Switzerland! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Austria')
+    async def twelve_points_austria(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_austria_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Austria! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Lithuania')
+    async def twelve_points_lithuania(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_lithuania_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Lithuania! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Latvia')
+    async def twelve_points_latvia(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_latvia_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Latvia! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Croatia')
+    async def twelve_points_croatia(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_croatia_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Croatia! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Iceland')
+    async def twelve_points_iceland(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_iceland_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Iceland! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Slovenia')
+    async def twelve_points_slovenia(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_slovenia_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Slovenia! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Denmark')
+    async def twelve_points_denmark(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_denmark_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Denmark! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Bulgaria')
+    async def twelve_points_bulgaria(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_bulgaria_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Bulgaria! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Sweden')
+    async def twelve_points_sweden(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_sweden_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Sweden! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Poland')
+    async def twelve_points_poland(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_poland_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Poland! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Estonia')
+    async def twelve_points_estonia(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_estonia_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Estonia! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Finland')
+    async def twelve_points_finland(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_finland_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Finland! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Azerbaijan')
+    async def twelve_points_azerbaijan(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_azerbaijan_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Azerbaijan! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Serbia')
+    async def twelve_points_serbia(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_serbia_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Serbia! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Belgium')
+    async def twelve_points_belgium(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_belgium_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Belgium! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Czech')
+    async def twelve_points_czech(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_czech_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Czech Republic! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Cyprus')
+    async def twelve_points_cyprus(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_cyprus_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Cyprus! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Malta')
+    async def twelve_points_malta(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_malta_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Malta! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Romania')
+    async def twelve_points_romania(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_romania_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Romania! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Marino')
+    async def twelve_points_marino(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_marino_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to San Marino! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Montenegro')
+    async def twelve_points_montenegro(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_montenegro_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Montenegro! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Israel')
+    async def twelve_points_israel(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_israel_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Israel! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Macedonia')
+    async def twelve_points_macedonia(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_macedonia_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to North Macedonia! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Ireland')
+    async def twelve_points_ireland(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_ireland_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Ireland! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Georgia')
+    async def twelve_points_georgia(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_georgia_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Georgia! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Italy')
+    async def twelve_points_italy(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_italy_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Italy! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'UK')
+    async def twelve_points_uk(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_uk_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to the UK! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Spain')
+    async def twelve_points_spain(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_spain_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Spain! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'France')
+    async def twelve_points_france(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_france_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to France! Thank you!")
+
+    @dp.callback_query_handler(lambda c: c.data == 'Germany')
+    async def twelve_points_germany(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_germany_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Germany! Thank you!")
+
 
