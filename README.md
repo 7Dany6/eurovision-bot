@@ -1,1 +1,1 @@
-# eurovision_bot
+# eurovision-bot
