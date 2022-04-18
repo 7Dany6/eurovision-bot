@@ -424,6 +424,14 @@ async def scoreboard(message: types.Message):
         database.give_azerbaijan_12_points(callback_query.from_user.id)
         await bot.send_message(callback_query.from_user.id, text="Twelve points to Azerbaijan! Thank you!")
 
+    @dp.callback_query_handler(lambda c: c.data == 'Australia')
+    async def twelve_points_australia(callback_query: types.CallbackQuery):
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+        database.insert_voter(callback_query.from_user.id)
+        database.give_australia_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Australia! Thank you!")
+
     @dp.callback_query_handler(lambda c: c.data == 'Serbia')
     async def twelve_points_serbia(callback_query: types.CallbackQuery):
         if database.voter_exists(callback_query.from_user.id):
