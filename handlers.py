@@ -10,12 +10,13 @@ from sql import *
 
 database = SQL(f'{DB_NAME}')
 
+
 @dp.message_handler(commands="start", state="*")
 async def greet_function(message: types.Message):
     await bot.send_message(USER_ID,
                            text="<a href='tg://user?id={1}'>{0}</a>"
-                                         " launched the bot!".format(message.from_user.first_name,
-                                                                    message.from_user.id))
+                                " launched the bot!".format(message.from_user.first_name,
+                                                            message.from_user.id))
     if database.user_exists(message.from_user.id):
         await bot.send_message(message.from_user.id, text="You are good to go!")
     else:
@@ -25,12 +26,14 @@ async def greet_function(message: types.Message):
 
 @dp.message_handler(commands="odds", state="*")
 async def bookmakers(message: types.Message):
-    await bot.send_message(USER_ID,
+    await bot.send_message(message.from_user.id,
                            text="<a href='https://eurovisionworld.com/odds/eurovision'>Bookmakers' predictions</a>")
+
 
 @dp.message_handler(commands="semifinal1", state="*")
 async def first_semi(message: types.Message):
-    await bot.send_message(message.from_user.id, text='Songs of the first semi-final:', reply_markup=inline_kb)
+    await bot.send_message(message.from_user.id, text='Songs of the first semi-final', reply_markup=inline_kb)
+
     @dp.callback_query_handler(lambda c: c.data == 'norway')
     async def norway(callback_query: types.CallbackQuery):
         await bot.send_message(callback_query.from_user.id, text="<a href='https://www.youtube.com/watch?v=O_AvUlCQ_Cc&list=PLmWYEDTNOGULG6eg0zgzvRercwqRP6mII&index=27'>Norway</a>")
@@ -116,10 +119,10 @@ async def first_semi(message: types.Message):
                                text="<a href='https://www.youtube.com/watch?v=g8Ezl7xucCU&list=PLmWYEDTNOGULG6eg0zgzvRercwqRP6mII&index=39'>Slovenia</a>")
 
 
-
 @dp.message_handler(commands="semifinal2", state="*")
 async def second_semi(message: types.Message):
-    await bot.send_message(message.from_user.id, text='Songs of the second semi-final:', reply_markup=inline_kb_2)
+    await bot.send_message(message.from_user.id, text='Songs of the second semi-final', reply_markup=inline_kb_2)
+
     @dp.callback_query_handler(lambda c: c.data == 'serbia')
     async def serbia(callback_query: types.CallbackQuery):
         await bot.send_message(callback_query.from_user.id, text="<a href='https://www.youtube.com/watch?v=3S1jrYq87Zw&list=PLmWYEDTNOGULG6eg0zgzvRercwqRP6mII&index=6'>Serbia</a>")
@@ -208,9 +211,10 @@ async def second_semi(message: types.Message):
         await bot.send_message(callback_query.from_user.id,
                                text="<a href='https://www.youtube.com/watch?v=qgukml7zDAA&list=PLmWYEDTNOGULG6eg0zgzvRercwqRP6mII&index=38'>Georgia</a>")
 
+
 @dp.message_handler(commands="final", state="*")
 async def final(message: types.Message):
-    await bot.send_message(message.from_user.id, text='Songs of the Grand Final:', reply_markup=inline_kb_3)
+    await bot.send_message(message.from_user.id, text='Songs of the Grand Final', reply_markup=inline_kb_3)
 
     @dp.callback_query_handler(lambda c: c.data == 'spain')
     async def spain(callback_query: types.CallbackQuery):
@@ -237,16 +241,19 @@ async def final(message: types.Message):
         await bot.send_message(callback_query.from_user.id,
                                text="<a href='https://www.youtube.com/watch?v=Oy-s-IZIHkI&list=PLmWYEDTNOGULG6eg0zgzvRercwqRP6mII&index=35'>Germany</a>")
 
+
 @dp.message_handler(commands='12points', state="*")
 async def scoreboard(message: types.Message):
     await bot.send_message(message.from_user.id, text='May we have your 12 points please?', reply_markup=inline_voting)
 
     @dp.callback_query_handler(lambda c: c.data == 'Norway')
     async def twelve_points_norway(callback_query: types.CallbackQuery):
-        if database.voter_exists(message.from_user.id):
-            database.remove_vote(message.from_user.id)
-            database.insert_voter(message.from_user.id)
-        database.give_norway_12_points(message.from_user.id)
-        await bot.send_message(message.from_user.id, text="Twelve points to Norway! Thank you!")
+        if database.voter_exists(callback_query.from_user.id):
+            database.remove_vote(callback_query.from_user.id)
+            print('remove')
+        database.insert_voter(callback_query.from_user.id)
+        print('insert')
+        database.give_norway_12_points(callback_query.from_user.id)
+        await bot.send_message(callback_query.from_user.id, text="Twelve points to Norway! Thank you!")
 
 
