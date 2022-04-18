@@ -95,14 +95,17 @@ inline_vote_uk = InlineKeyboardButton('The UK', callback_data='UK')
 inline_vote_spain = InlineKeyboardButton('Spain', callback_data='Spain')
 inline_vote_france = InlineKeyboardButton('France', callback_data='France')
 inline_vote_germany = InlineKeyboardButton('Germany', callback_data='Germany')
-inline_voting = InlineKeyboardMarkup(row_width=8)
+inline_voting = InlineKeyboardMarkup(row_width=5)
 inline_voting.row(inline_vote_norway, inline_vote_uk, inline_vote_romania, inline_vote_germany,
-                  inline_vote_france, inline_vote_macedonia, inline_vote_georgia, inline_vote_spain)
-inline_voting.row(inline_vote_san, inline_vote_denmark, inline_vote_italy, inline_vote_montenegro,
-                  inline_vote_azerbaijan, inline_vote_armenia, inline_vote_czech, inline_vote_serbia)
-inline_voting.row(inline_vote_iceland, inline_vote_ireland, inline_vote_israel, inline_vote_malta,
-                  inline_vote_cyprus, inline_vote_belgium, inline_vote_australia, inline_vote_austria)
-inline_voting.row(inline_vote_croatia, inline_vote_poland, inline_vote_sweden, inline_vote_estonia,
-                  inline_vote_finland, inline_vote_latvia, inline_vote_bulgaria, inline_vote_lithuania)
-inline_voting.row(inline_vote_swiss, inline_vote_slovenia, inline_vote_greece, inline_vote_moldova,
-                  inline_vote_albania, inline_vote_portugal, inline_vote_ukraine, inline_vote_netherlands)
+                  inline_vote_france)
+inline_voting.row(inline_vote_macedonia, inline_vote_georgia, inline_vote_spain, inline_vote_san, inline_vote_denmark)
+inline_voting.row(inline_vote_italy, inline_vote_montenegro, inline_vote_azerbaijan, inline_vote_armenia,
+                  inline_vote_czech)
+inline_voting.row(inline_vote_serbia, inline_vote_iceland, inline_vote_ireland, inline_vote_israel, inline_vote_malta)
+inline_voting.row(inline_vote_cyprus, inline_vote_belgium, inline_vote_australia, inline_vote_austria,
+                  inline_vote_croatia)
+inline_voting.row(inline_vote_poland, inline_vote_sweden, inline_vote_estonia, inline_vote_finland, inline_vote_latvia)
+inline_voting.row(inline_vote_bulgaria, inline_vote_lithuania, inline_vote_swiss, inline_vote_slovenia,
+                  inline_vote_greece)
+inline_voting.row(inline_vote_moldova, inline_vote_albania, inline_vote_portugal, inline_vote_ukraine,
+                  inline_vote_netherlands)
