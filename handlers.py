@@ -569,3 +569,52 @@ async def scoreboard(message: types.Message):
         await bot.send_message(callback_query.from_user.id, text="Twelve points to Germany! Thank you!")
 
 
+@dp.message_handler(commands='scoreboard', state="*")
+async def show_scoreboard(message: types.Message):
+    scoreboard = {'Norway': database.count_norway()[0][0],
+                  'Ukraine': database.count_ukraine()[0][0],
+                  'The Netherlands': database.count_netherlands()[0][0],
+                  'Greece': database.count_greece()[0][0],
+                  'Albania': database.count_albania()[0][0],
+                  'Armenia': database.count_armenia()[0][0],
+                  'Moldova': database.count_moldova()[0][0],
+                  'Portugal': database.count_portugal()[0][0],
+                  'Switzerland': database.count_swiss()[0][0],
+                  'Austria': database.count_austria()[0][0],
+                  'Lithuania': database.count_lithuania()[0][0],
+                  'Latvia': database.count_latvia()[0][0],
+                  'Croatia': database.count_croatia()[0][0],
+                  'Iceland': database.count_iceland()[0][0],
+                  'Slovenia': database.count_slovenia()[0][0],
+                  'Denmark': database.count_denmark()[0][0],
+                  'Bulgaria': database.count_bulgaria()[0][0],
+                  'Sweden': database.count_sweden()[0][0],
+                  'Poland': database.count_poland()[0][0],
+                  'Estonia': database.count_estonia()[0][0],
+                  'Finland': database.count_finland()[0][0],
+                  'Azerbaijan': database.count_azerbaijan()[0][0],
+                  'Australia': database.count_australia()[0][0],
+                  'Serbia': database.count_serbia()[0][0],
+                  'Belgium': database.count_belgium()[0][0],
+                  'Czech Republic': database.count_czech()[0][0],
+                  'Cyprus': database.count_cyprus()[0][0],
+                  'Malta': database.count_malta()[0][0],
+                  'Romania': database.count_romania()[0][0],
+                  'San Marino': database.count_marino()[0][0],
+                  'Montenegro': database.count_montenegro()[0][0],
+                  'Israel': database.count_israel()[0][0],
+                  'North Macedonia': database.count_macedonia()[0][0],
+                  'Ireland': database.count_ireland()[0][0],
+                  'Georgia': database.count_georgia()[0][0],
+                  'Italy': database.count_italy()[0][0],
+                  'The UK': database.count_uk()[0][0],
+                  'Spain': database.count_spain()[0][0],
+                  'France': database.count_france()[0][0],
+                  'Germany': database.count_germany()[0][0]}
+    points_scoreboard = sorted(scoreboard.items(), reverse=True, key=lambda x: x[1])
+    results = ""
+    for result in points_scoreboard:
+        results += result[0] + ': ' + str(result[1]) + '\n'
+    await bot.send_message(message.from_user.id, text=results)
+
+
