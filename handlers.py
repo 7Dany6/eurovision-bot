@@ -1,6 +1,7 @@
 import sqlite3
 import requests
 from aiogram import types
+from aiogram.types import ParseMode
 
 from main import dp, bot
 from config import USER_ID, DB_NAME
@@ -17,6 +18,17 @@ async def greet_function(message: types.Message):
                            text="<a href='tg://user?id={1}'>{0}</a>"
                                 " launched the bot!".format(message.from_user.first_name,
                                                             message.from_user.id))
+    await bot.send_message(message.from_user.id,
+                           text="Good evening, Europe and good morning, Australia!\n"
+                                "This is 'Douze points' calling!\n"
+                                "/odds - to peek at bookmakers' predictions\n"
+                                "/semifinal1 - to listen to any song from the first semi-final\n"
+                                "/semifinal2 - to listen to any song from the second semi-final\n"
+                                "/final - to listen to any song from the Grand final\n"
+                                "/12points - to give your douze points to your favourite"
+                                " (<b>you can vote more than once - scoreboard will be refreshed automatically</b>)\n"
+                                "/scoreboard - see public top of songs (is available after your voting)",
+                           parse_mode=ParseMode.HTML)
     if database.user_exists(message.from_user.id):
         await bot.send_message(message.from_user.id, text="You are good to go!")
     else:
