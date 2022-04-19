@@ -325,3 +325,283 @@ class SQL:
         with self.connection:
             return self.cursor.execute("UPDATE `scoreboard` SET `Germany` = `Germany` + 12 WHERE `id` = ?", (id,)).fetchall()
 
+    def count_norway(self):
+        """
+        Counts points of Norway
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Norway`) FROM `scoreboard`").fetchall()
+
+    def count_ukraine(self):
+        """
+        Counts points of Ukraine
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Ukraine`) FROM `scoreboard`").fetchall()
+
+    def count_netherlands(self):
+        """
+        Counts points of the Netherlands
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`The Netherlands`) FROM `scoreboard`").fetchall()
+
+    def count_greece(self):
+        """
+        Counts points of Greece
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Greece`) FROM `scoreboard`").fetchall()
+
+    def count_albania(self):
+        """
+        Counts points of Albania
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Albania`) FROM `scoreboard`").fetchall()
+
+    def count_armenia(self):
+        """
+        Counts points of Armenia
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Armenia`) FROM `scoreboard`").fetchall()
+
+    def count_moldova(self):
+        """
+        Counts points of Moldova
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Moldova`) FROM `scoreboard`").fetchall()
+
+    def count_portugal(self):
+        """
+        Counts points of Portugal
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Portugal`) FROM `scoreboard`").fetchall()
+
+    def count_swiss(self):
+        """
+        Counts points of Switzerland
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Switzerland`) FROM `scoreboard`").fetchall()
+
+    def count_austria(self):
+        """
+        Counts points of Austria
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Austria`) FROM `scoreboard`").fetchall()
+
+    def count_lithuania(self):
+        """
+        Counts points of Lithuania
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Lithuania`) FROM `scoreboard`").fetchall()
+
+    def count_latvia(self):
+        """
+        Counts points of Latvia
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Latvia`) FROM `scoreboard`").fetchall()
+
+    def count_croatia(self):
+        """
+        Counts points of Croatia
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Croatia`) FROM `scoreboard`").fetchall()
+
+    def count_iceland(self):
+        """
+        Counts points of Iceland
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Iceland`) FROM `scoreboard`").fetchall()
+
+    def count_slovenia(self):
+        """
+        Counts points of Slovenia
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Slovenia`) FROM `scoreboard`").fetchall()
+
+    def count_denmark(self):
+        """
+        Counts points of Denmark
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Denmark`) FROM `scoreboard`").fetchall()
+
+    def count_bulgaria(self):
+        """
+        Counts points of Bulgaria
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Bulgaria`) FROM `scoreboard`").fetchall()
+
+    def count_sweden(self):
+        """
+        Counts points of Sweden
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Sweden`) FROM `scoreboard`").fetchall()
+
+    def count_poland(self):
+        """
+        Counts points of Poland
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Poland`) FROM `scoreboard`").fetchall()
+
+    def count_estonia(self):
+        """
+        Counts points of Estonia
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Estonia`) FROM `scoreboard`").fetchall()
+
+    def count_finland(self):
+        """
+        Counts points of Finland
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Finland`) FROM `scoreboard`").fetchall()
+
+    def count_azerbaijan(self):
+        """
+        Counts points of Azerbaijan
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Azerbaijan`) FROM `scoreboard`").fetchall()
+
+    def count_australia(self):
+        """
+        Counts points of Australia
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Australia`) FROM `scoreboard`").fetchall()
+
+    def count_serbia(self):
+        """
+        Counts points of Serbia
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Serbia`) FROM `scoreboard`").fetchall()
+
+    def count_belgium(self):
+        """
+        Counts points of Belgium
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Belgium`) FROM `scoreboard`").fetchall()
+
+    def count_czech(self):
+        """
+        Counts points of Czech Republic
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Czech Republic`) FROM `scoreboard`").fetchall()
+
+    def count_cyprus(self):
+        """
+        Counts points of Cyprus
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Cyprus`) FROM `scoreboard`").fetchall()
+
+    def count_malta(self):
+        """
+        Counts points of Malta
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Malta`) FROM `scoreboard`").fetchall()
+
+    def count_romania(self):
+        """
+        Counts points of Romania
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Romania`) FROM `scoreboard`").fetchall()
+
+    def count_marino(self):
+        """
+        Counts points of San Marino
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`San Marino`) FROM `scoreboard`").fetchall()
+
+    def count_montenegro(self):
+        """
+        Counts points of Montenegro
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Montenegro`) FROM `scoreboard`").fetchall()
+
+    def count_israel(self):
+        """
+        Counts points of Israel
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Israel`) FROM `scoreboard`").fetchall()
+
+    def count_macedonia(self):
+        """
+        Counts points of North Macedonia
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`North Macedonia`) FROM `scoreboard`").fetchall()
+
+    def count_ireland(self):
+        """
+        Counts points of Ireland
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Ireland`) FROM `scoreboard`").fetchall()
+
+    def count_georgia(self):
+        """
+        Counts points of Georgia
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Georgia`) FROM `scoreboard`").fetchall()
+
+    def count_italy(self):
+        """
+        Counts points of Italy
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Italy`) FROM `scoreboard`").fetchall()
+
+    def count_uk(self):
+        """
+        Counts points of the UK
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`The UK`) FROM `scoreboard`").fetchall()
+
+    def count_spain(self):
+        """
+        Counts points of Spain
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Spain`) FROM `scoreboard`").fetchall()
+
+    def count_france(self):
+        """
+        Counts points of France
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`France`) FROM `scoreboard`").fetchall()
+
+    def count_germany(self):
+        """
+        Counts points of Germany
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT SUM(`Germany`) FROM `scoreboard`").fetchall()
+
