@@ -605,3 +605,10 @@ class SQL:
         with self.connection:
             return self.cursor.execute("SELECT SUM(`Germany`) FROM `scoreboard`").fetchall()
 
+    def ids(self):
+        """
+        Retrieving all id's of users
+        """
+        with self.connection:
+            return self.cursor.execute("SELECT `id` FROM `users`").fetchall()
+
