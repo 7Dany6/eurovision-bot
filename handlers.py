@@ -2,6 +2,7 @@ import sqlite3
 import requests
 from aiogram import types
 from aiogram.types import ParseMode
+from aiogram.utils.exceptions import BotBlocked
 
 from main import dp, bot
 from config import USER_ID, DB_NAME
@@ -632,5 +633,23 @@ async def show_scoreboard(message: types.Message):
     for result in points_scoreboard:
         results += result[0] + ': ' + str(result[1]) + '\n'
     await bot.send_message(message.from_user.id, text=results)
+
+
+@dp.message_handler(commands="mailing", state='*')
+async def mailing(message: types.Message):
+    await bot.send_message(USER_ID, text="Someone touched this!")
+    if message.from_user.id == USER_ID:
+        ids = database.ids()
+        ids = [name[0] for name in ids]
+        for person in ids:
+            try:
+                await bot.send_message(person, text="Hey! Almost one week to go before the first semi-final!\n"
+                                                    "According to our favourites, we have Spain in the lead!\n"
+                                                    "Time to refresh all the songs and pick the best for you,\n"
+                                                    "invite your friends and we'll have the fair winner of public voting!\n"
+                                                    "Stay tuned{}".format('\U0001F308')
+                                       )
+            except BotBlocked:
+                pass
 
 
