@@ -27,7 +27,11 @@ async def greet_function(message: types.Message):
                                 "/final - to listen to any song from the Grand final\n"
                                 "/12points - to give your douze points to your favourite"
                                 " (<b>you can vote more than once - scoreboard will be refreshed automatically</b>)\n"
-                                "/scoreboard - see public top of songs (is available after your voting)",
+                                "/scoreboard - see public top of songs (is available after your voting)\n"
+                                "Dates of the shows:\n"
+                                "Semi-final 1: 10 May 2022\n"
+                                "Semi-final 2: 12 May 2022\n"
+                                "Grand Final: 14 May 2022\n",
                            parse_mode=ParseMode.HTML)
     if database.user_exists(message.from_user.id):
         await bot.send_message(message.from_user.id, text="You are good to go!")
